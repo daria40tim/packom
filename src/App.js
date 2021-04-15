@@ -50,22 +50,41 @@ class App extends Component {
     super(props)
 
     this.state = {
-      filterData: {},
+      fname: '',
+      fgroup: '', 
+      fcountry: '', 
+      fspec: [],
       data: data
     };
     this.handler = this.handler.bind(this)
+    this.onClick = this.onClick.bind(this)
   }
 
-  handler(filterData) {
-    this.setState({
-      filterData: filterData, 
-      data: []
-    })
 
-    console.log(filterData.fname)
+  handler(name, group, country, spec) {
+    this.setState({
+      fname: name,
+      fcountry: country, 
+      fgroup: group, 
+      fspec: spec 
+    })
+    
+
   }
 
   
+  onClick = () => {
+    let arr = []
+    this.state.data.forEach(i => {
+      if(i.name == this.state.fname){
+        arr.push(i)
+      }
+    });
+    this.setState({
+      data:arr
+    })
+    console.log(this.state.data[0])
+  }
 
   render(){
   return (
@@ -75,10 +94,11 @@ class App extends Component {
           <Route exact path="/orgs">
             <table>
               <tr>
-            <td className='filters'><Filters data={this.state.data} handler={this.handler}/></td>    
-            <td className='org_table'><Orgs data={this.state.data} filterData={this.state.filterData}/></td>
+            <td className='filters'><Filters data={data} handler={this.handler}/></td>    
+            <td className='org_table'><Orgs data={this.state.data}/></td>
             </tr>
             </table>
+            <button onClick={this.onClick}>ipasdjfoiwse</button>
           </Route>
           <Route exact path="/orgs/link/:o_id" component={ Org }/>
         </div>

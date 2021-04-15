@@ -35,14 +35,14 @@ class Filters extends Component {
       }
       
 
-      let filterData = {
+      this.setState({
         fname: name, 
         fgroup: group, 
         fcountry: country, 
         fspec: spec,
-      }
+      })
 
-      this.props.handler(filterData)
+      this.props.handler(name)
     }
 
 
