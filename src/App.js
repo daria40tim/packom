@@ -72,20 +72,6 @@ class App extends Component {
 
   }
 
-  
-  onClick = () => {
-    let arr = []
-    this.state.data.forEach(i => {
-      if(i.name == this.state.fname){
-        arr.push(i)
-      }
-    });
-    this.setState({
-      data:arr
-    })
-    console.log(this.state.data[0])
-  }
-
   render(){
   return (
     <BrowserRouter>
@@ -98,7 +84,6 @@ class App extends Component {
             <td className='org_table'><Orgs data={this.state.data}/></td>
             </tr>
             </table>
-            <button onClick={this.onClick}>ipasdjfoiwse</button>
           </Route>
           <Route exact path="/orgs/link/:o_id" component={ Org }/>
         </div>
