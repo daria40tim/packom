@@ -1,7 +1,7 @@
 {
   "name": "packom",
   "version": "0.1.0",
-  "homepage": "http://daria40tim.github.io/packom.git",
+  "homepage": "https://daria40tim.github.io/packom/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",

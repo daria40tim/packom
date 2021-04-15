@@ -22,8 +22,8 @@ class Header extends Component {
           <li className="nav-item">
             <a className="nav-link" href="#">Тендерные решения</a>
           </li>
-          <li className="nav-item active">
-            <Link className="nav-link active" to='/orgs'>Организации</Link>
+          <li className="nav-item ">
+            <Link className="nav-link " to='/orgs'>Организации</Link>
           </li>
         </ul>
       </div>
