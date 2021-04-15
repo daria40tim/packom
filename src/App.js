@@ -57,7 +57,6 @@ class App extends Component {
       data: data
     };
     this.handler = this.handler.bind(this)
-    this.onClick = this.onClick.bind(this)
   }
 
 
