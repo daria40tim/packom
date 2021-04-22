@@ -28,9 +28,9 @@ class Orgs extends Component {
 
 
 
-    onClick(e){
-      e.preventDefault();
+    onClick = (e) => {
 
+      let arr = []
       let name = document.getElementById('name_select').value
       
       let group = ""
@@ -53,7 +53,18 @@ class Orgs extends Component {
         fspec: spec,
       })
 
-      this.props.handler(name)
+      for (let i=0; i<this.state.data.length;i++) {
+        if (this.props.data[i].name == name){
+          arr.push(this.state.data[i])
+        }
+      }
+
+      this.setState({
+        data: arr
+      })
+
+      this.forceUpdate()
+
     }
 
   onClickName = () => {
