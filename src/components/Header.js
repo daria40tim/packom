@@ -14,13 +14,13 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="#" onclick="onClick()">Технические задания</a>
+            <Link className="nav-link" aria-current="page" to="/tech" onclick="onClick()">Технические задания</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Коммерческие предложения</a>
+            <Link className="nav-link" to='/commertial'>Коммерческие предложения</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Тендерные решения</a>
+            <Link className="nav-link" to="/tenders">Тендерные решения</Link>
           </li>
           <li className="nav-item ">
             <Link className="nav-link " to='/orgs'>Организации</Link>

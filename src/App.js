@@ -6,6 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from "react-router-dom";
 import Org from './components/Org'
 import Filters from './components/Filters'
+import CP from './components/CP';
+import Techs from './components/Techs';
+import Tenders from './components/Tenders';
 
 
 let data = [
@@ -78,6 +81,15 @@ class App extends Component {
         <Header/>
           <Route exact path="/orgs">
             <Orgs data={this.state.data}/>
+          </Route>
+          <Route exact path="/commertial">
+            <CP data={this.state.data}/>
+          </Route>
+          <Route exact path="/tech">
+            <Techs data={this.state.data}/>
+          </Route>
+          <Route exact path="/tenders">
+            <Tenders data={this.state.data}/>
           </Route>
           <Route exact path="/orgs/link/:o_id" component={ Org }/>
         </div>
