@@ -12,17 +12,15 @@ code {
     monospace;
 }
 
-.org_table{
-  width: 70vw;
-  max-width: 90vw;
-  margin-left: 10vw;
+#org_table{
+
+overflow: auto;
 }
 
-.filters{
+/*.filters{
   width: 10vw;
-}
+}*/
 
-.filter{
-  width: 10vw;
-  text-align: left;
+.filter *{
+margin: 1%;
 }

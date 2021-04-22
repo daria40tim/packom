@@ -77,12 +77,7 @@ class App extends Component {
     <div className="App">
         <Header/>
           <Route exact path="/orgs">
-            <table>
-              <tr>
-            <td className='filters'><Filters data={data} handler={this.handler}/></td>    
-            <td className='org_table'><Orgs data={this.state.data}/></td>
-            </tr>
-            </table>
+            <Orgs data={this.state.data}/>
           </Route>
           <Route exact path="/orgs/link/:o_id" component={ Org }/>
         </div>
